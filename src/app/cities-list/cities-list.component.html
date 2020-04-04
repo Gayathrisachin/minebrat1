@@ -1,0 +1,10 @@
+<form [formGroup]="form" class=" dashboard-summery-one">
+    <mat-form-field class="mat" appearance="outline">
+        <mat-label>City</mat-label>
+        <mat-select formControlName="cityName" >
+            <mat-option *ngFor="let city of cities" [value]="city.id">{{city.cities}}
+            
+            </mat-option>
+        </mat-select>
+      </mat-form-field>
+      </form>

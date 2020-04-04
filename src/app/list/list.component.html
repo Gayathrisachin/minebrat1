@@ -1,0 +1,12 @@
+<form [formGroup]="form" class=" dashboard-summery-one" #formone="ngForm">
+    <mat-form-field class="mat" appearance="outline">
+        <mat-label>State</mat-label>
+        <mat-select formControlName="stateName" (change)="onChangeState($event.target.value)">
+          <mat-option *ngFor="let state of stateInfo" [value]="state.id">{{state.stateName}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+     
+      </form>
+<app-cities-list></app-cities-list>
+<button mat-button color="primary">Submit</button>
